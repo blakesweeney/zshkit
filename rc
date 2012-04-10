@@ -5,3 +5,9 @@ compinit
 
 autoload -Uz colors
 colors
+
+setopt autocd
+setopt multios
+setopt cdablevarS
+
+# vim: ft=zsh

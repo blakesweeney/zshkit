@@ -1,4 +1,5 @@
-path=($HOME/.rbenv/bin /opt/local/bin $HOME/bin $HOME/.gem/ruby/1.8/bin $path /usr/local/mysql/bin/ /opt/git/bin /usr/local/bin  /usr/texbin /usr/sfw/bin /usr/ccs/bin /usr/sbin)
-
-# Allow MacPorts man pages
-manpath=($manpath /opt/local/man)
+path=($HOME/.rbenv/bin /usr/local/bin $HOME/bin $HOME/Applications/scripts $path)
+path=(/usr/local/lib/luarocks/bin $path)
+path=($path /usr/local/mysql/bin/ /usr/texbin /usr/sfw/bin /usr/ccs/bin)
+path=($path /usr/sbin /usr/local/Cellar/python/2.7.1/bin/ /usr/local/lib/luarocks/bin)
+path=($path /usr/local/lib/luarocks/bin)

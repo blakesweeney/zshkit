@@ -5,23 +5,9 @@ function not_run_from_ssh () {
 	echo $?
 }
 
-if [[ -x `which aquamacs` ]]; then
-  alias am="emacsclient -n"
-  EDITOR="emacsclient -a 'mate -w'"
-elif [[ -x `which mate` && $(not_run_from_ssh) = 1 ]]; then
-	EDITOR="mate -w"
-	alias e="mate"
-	# Useful functions for bundle development
-	function reload_textmate(){
-		osascript -e 'tell app "TextMate" to reload bundles'
-	}
-	function bundle () {
-		cd "$HOME/Library/Application Support/TextMate/Bundles/$1.tmbundle"
-	}
-elif [[ -x `which nano` ]]; then
-	EDITOR=nano
-elif [[ -x `which pico` ]]; then
-	EDITOR=pico
+if [[ -x `which cvim` ]]; then
+  alias vi="cvim"
+  EDITOR=cvim
 elif [[ -x `which gvim` ]]; then
 	EDITOR=gvim
 elif [[ -x `which vim` ]]; then
@@ -44,4 +30,3 @@ if [[ $OSTYPE[1,6] == "darwin" ]]; then
 		alias -s $s=open
 	done
 fi
-

@@ -5,3 +5,5 @@ if [[ ( $SHLVL < 3 ) || ( $INSIDE_EMACS == * && $TERM == "eterm-color" ) ]]; the
 		source $f
 	done
 fi
+
+# vim: ft=zsh
