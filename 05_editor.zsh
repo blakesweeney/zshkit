@@ -5,7 +5,10 @@ function not_run_from_ssh () {
 	echo $?
 }
 
-if [[ -x `which cvim` ]]; then
+if [[ -x `which mvim` ]]; then
+  alias vi="mvim"
+  EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"'
+elif [[ -x `which cvim` ]]; then
   alias vi="cvim"
   EDITOR=cvim
 elif [[ -x `which gvim` ]]; then
@@ -20,6 +23,8 @@ fi
 for s in txt c cc cxx cpp; do
 	alias -s $s=$EDITOR
 done
+
+alias o=open
 
 # Abuse the "open" command on OS X
 if [[ $OSTYPE[1,6] == "darwin" ]]; then
