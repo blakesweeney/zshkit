@@ -3,7 +3,7 @@ setopt prompt_subst
 if [ "$(whoami)" = "root" ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
 PROMPT='%{$reset_color%B%n%b@%m %{$fg_bold[blue]%~%} %{$reset_color%} `git-prompt` %}
-%(!.#.>) '
+%(!.#.$) '
 
 RPROMPT=''
 
