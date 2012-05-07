@@ -3,7 +3,9 @@ if [[ -e "$rb_complete" ]]; then
   source "$rb_complete"
 fi
 
-eval "$(rbenv init -)"
-function ruby-version-prompt () {
-	echo "$(rbenv version-name) "
-}
+if [[ -x "rbenv" ]]; then
+  eval "$(rbenv init -)"
+  function ruby-version-prompt () {
+    echo "$(rbenv version-name) "
+  }
+fi
