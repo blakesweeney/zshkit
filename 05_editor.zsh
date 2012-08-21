@@ -7,7 +7,7 @@ function not_run_from_ssh () {
 
 if [[ -x `which mvim` ]]; then
   alias vi="mvim"
-  EDITOR='mvim -f -c "au VimLeave * !open -a Terminal"'
+  EDITOR='mvim -f -c "au VimLeave * !open -a iTerm"'
 elif [[ -x `which cvim` ]]; then
   alias vi="cvim"
   EDITOR=cvim
