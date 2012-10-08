@@ -6,4 +6,6 @@ if [[ ( $SHLVL < 3 ) || ( $INSIDE_EMACS == * && $TERM == "eterm-color" ) ]]; the
 	done
 fi
 
+eval "$(/Users/blake/dev/notes/bin/notes init -)"
+
 # vim: ft=zsh
