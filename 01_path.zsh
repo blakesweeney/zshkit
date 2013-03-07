@@ -1,6 +1,6 @@
-path=($HOME/.rbenv/bin /usr/local/bin $HOME/bin $HOME/Applications/scripts $path)
-path=($path /usr/local/mysql/bin/ /usr/texbin /usr/local/share/python3)
-path=($path /usr/sbin /usr/local/Cellar/python/2.7.1/bin/ /usr/local/lib/luarocks/bin)
-path=($path /usr/local/lib/luarocks/bin /usr/local/Cellar/chicken/4.7.0/bin)
-path=($path /usr/local/share/python /usr/local/mercury-11.07-beta-2011-12-16/bin)
-path=($path /sw/bin/ ~/.local/bin)
+
+BREW_HOME=/Users/bsweene/.local
+
+path=($BREW_HOME/bin $HOME/bin $HOME/Applications/scripts $path)
+path=($path /usr/texbin /usr/sbin)
+path=($path $BREW_HOME/share/python $BREW_HOME/share/python3 $BREW_HOME/share/npm/bin)
