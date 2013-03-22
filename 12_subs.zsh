@@ -16,3 +16,10 @@ if [[ $? -eq 1 ]]; then
     fi
   done
 fi
+
+alias n='_nowhere_wrapper cd'
+alias nh='nowhere add'
+alias nls='nowhere ls'
+alias now='_nowhere_wrapper'
+alias here='nowhere here'
+alias there='nowhere there'
