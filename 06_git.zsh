@@ -1,5 +1,8 @@
 if [[ -x `which git` ]]; then
 
+  GIT_MERGE_AUTOEDIT=no
+	export GIT_MERGE_AUTOEDI
+
 	alias g=git
 	alias gco=git-checkout
 	alias gb=git-branch
