@@ -5,7 +5,10 @@ if [[ ! -d "$SUB_HOME/bin" ]]; then
 fi
 
 path=($path "$SUB_HOME/bin")
-. $SUB_HOME/init
+
+if [[ -e "$SUB_HOME/init" ]]; then
+  . $SUB_HOME/init
+fi
 
 alias n='_nowhere_wrapper cd'
 alias nh='nowhere add'
