@@ -2,12 +2,21 @@
 # http://unix.stackexchange.com/questions/62579/is-there-a-way-to-add-a-directory-to-my-path-in-zsh-only-if-its-not-already-pre
 typeset -U path
 
-path=($path /usr/local/bin $HOME/.local/bin)
-BREW_HOME=`brew --prefix`
+path=(/usr/bin /bin /usr/sbin /sbin)
 
-path=($HOME/bin $HOME/Applications/scripts $path)
-path=($path /usr/texbin /usr/sbin)
-path=($path $BREW_HOME/share/python $BREW_HOME/share/python3 $BREW_HOME/share/npm/bin)
+path+="/usr/local/bin"
+path+="$HOME/.local/bin"
+path+="/usr/texbin"
+path+="/usr/sbin"
+
+BREW_HOME=`brew --prefix`
+path+="$BREW_HOME/share/python"
+path+="$BREW_HOME/share/python3"
+path+="$BREW_HOME/share/npm/bin"
+
+# Prepend my scripts
+path[1,0]="$HOME/bin"
+path[1,0]="$HOME/Applications/scripts"
 
 # From:
 # http://stackoverflow.com/questions/9347478/how-to-edit-path-variable-in-zsh

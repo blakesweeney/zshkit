@@ -4,7 +4,7 @@ if [[ ! -d "$SUB_HOME/bin" ]]; then
   mkdir -p "$SUB_HOME/bin"
 fi
 
-path=($path "$SUB_HOME/bin")
+path+="$SUB_HOME/bin"
 
 if [[ -e "$SUB_HOME/init" ]]; then
   . $SUB_HOME/init
