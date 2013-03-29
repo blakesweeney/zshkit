@@ -1,7 +1,7 @@
 if [[ -x `which git` ]]; then
 
   GIT_MERGE_AUTOEDIT=no
-	export GIT_MERGE_AUTOEDI
+	export GIT_MERGE_AUTOEDIT
 
 	alias g=git
 	alias gco=git-checkout
