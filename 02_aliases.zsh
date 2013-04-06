@@ -6,3 +6,4 @@ alias ll="ls -al"
 alias cls='clear; ls'
 alias fd=pushd
 alias sd=popd
+alias sess='tmux attach-session -t'
