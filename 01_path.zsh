@@ -23,6 +23,7 @@ path+="/usr/sbin"
 # Add homebrew if it exists
 if (( $+commands[brew] )); then
   BREW_HOME=`brew --prefix`
+  path[1,0]="$BREW_HOME/bin"
   path+="$BREW_HOME/share/python"
   path+="$BREW_HOME/share/python3"
   path+="$BREW_HOME/share/npm/bin"
