@@ -3,15 +3,9 @@
 # http://unix.stackexchange.com/questions/62579/is-there-a-way-to-add-a-directory-to-my-path-in-zsh-only-if-its-not-already-pre
 typeset -U path
 
-path=(/usr/bin /bin /usr/sbin /sbin)
-
 # This is for the server where things are setup differently, so I need to add
 # some paths. On other machines it should be filtered out at the end.
-path+=/opt/local/bin 
-path+=/opt/local/sbin 
-path+=/sw/bin 
-path+=/sw/sbin 
-path+=/usr/local/mysql/bin/ 
+path=(/opt/local/bin /opt/local/sbin /sw/bin /sw/sbin /usr/bin /bin /usr/sbin /sbin /usr/local/mysql/bin/)
 path+=/Applications/MATLAB_R2007b/bin 
 path+=/Applications/RNAsoft/translator/bin/ 
 
