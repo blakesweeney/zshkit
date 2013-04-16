@@ -7,3 +7,4 @@ alias cls='clear; ls'
 alias fd=pushd
 alias sd=popd
 alias sess='tmux attach-session -t'
+alias lvim='~/.local/bin/vim'
